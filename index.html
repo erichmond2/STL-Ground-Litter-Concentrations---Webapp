@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<title>Saint Louis Grount Litter Concentrations - Webapp</title>
+<style>
+html,
+body,
+#viewDiv {
+padding: 0;
+margin: 0;
+height: 100%;
+width: 100%;
+}
+</style>
+<link rel="stylesheet" href="https://js.arcgis.com/4.25/esri/themes/light/main.css" />
+<script src="https://js.arcgis.com/4.25/"></script>
+<script>
+require(["esri/views/MapView", "esri/WebMap"],        
+(MapView, WebMap) => {
+const webmap = new WebMap({
+portalItem: {
+id: "67ce6d0d87c74d1f9059de67bf93a922"
+}
+});
+const view = new MapView({
+map: webmap,
+container: "viewDiv"
+});
+});
+</script>
+</head>
+<body>
+<div id="viewDiv"></div>
+</body>
+</html>
